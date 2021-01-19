@@ -316,7 +316,7 @@ def main():
     # Game Start!
     while True:
         # 사용자 입력
-        user_input = input("Input guess number : ")
+        user_input = str(input("Input guess number : "))
 
         # 1. 사용자 입력에 대한 오류 처리
 
