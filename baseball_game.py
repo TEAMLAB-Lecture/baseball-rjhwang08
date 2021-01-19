@@ -306,7 +306,7 @@ def is_no(one_more_input):
 
 def main():
     print("Play Baseball")
-    user_input = "999"
+    user_input = "0"
     random_number = str(get_not_duplicated_three_digit_number())
     print("Random Number is : ", random_number)
     # ===Modify codes below=============
@@ -317,7 +317,8 @@ def main():
     while True:
         # 사용자 입력
         user_input = str(input("Input guess number : "))
-
+        if user_input == '0':
+            break
         # 1. 사용자 입력에 대한 오류 처리
 
         # 사용자가 숫자 대신 문자가 포함된 입력을 했을 경우 (ex. ab3)
@@ -335,10 +336,10 @@ def main():
         if ans[0] == 3:
             re_game = "aaa"
             while True:
-                print("Wrong Input, Input again")
-                re_game = input("You win, one more(Y/N) ?")
+                re_game = input("You win, one more(Y/N)?")
                 if is_no(re_game) or is_yes(re_game):
                     break
+                print("Wrong Input, Input again")
             
             # 사용자가 게임 종료를 원하는 경우
             if is_no(re_game):
